@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: halimhammami249-ctrl/decap
+  name: git-gateway
   branch: main
 
 media_folder: 'images'
