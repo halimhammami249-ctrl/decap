@@ -8,15 +8,16 @@ public_folder: '/images'
 collections:
   - name: 'products'
     label: 'Products'
-    folder: 'products'
-    create: true
-    slug: '{{slug}}'
-   fields:
-  - name: products
-    label: Products
-    widget: list
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Price", name: "price", widget: "number" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Description", name: "description", widget: "text" }
+    files:
+      - file: 'products.json'
+        label: 'Product List'
+        name: 'products'
+        fields:
+          - name: products
+            label: Products
+            widget: list
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Price', name: 'price', widget: 'number' }
+              - { label: 'Image', name: 'image', widget: 'image' }
+              - { label: 'Description', name: 'description', widget: 'text' }
