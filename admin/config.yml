@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: halimhammami249-ctrl/product-cms-system
+  repo: halimhammami249-ctrl/product-cms-clean
   branch: main
 
 media_folder: 'images'
