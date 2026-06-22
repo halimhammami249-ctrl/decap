@@ -2,7 +2,6 @@ backend:
   name: github
   repo: halimhammami249-ctrl/decap
   branch: main
-  base_url: https://api.github.com
 
 media_folder: 'images'
 public_folder: '/images'
