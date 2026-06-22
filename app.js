@@ -1,24 +1,40 @@
-fetch('/products.json')
-  .then((response) => response.json())
-  .then((data) => {
+async function loadProducts() {
+  try {
+    const res = await fetch('/products.json');
+    const data = await res.json();
+
     const container = document.getElementById('products');
 
-    container.innerHTML = '';
+    // Your JSON format: { products: [...] }
+    const products = data.products || [];
 
-    // CASE 1: Decap "list field" format (your setup)
-    const products = data.products || data;
+    if (!container) {
+      console.error('Missing #products container in HTML');
+      return;
+    }
 
-    products.forEach((product) => {
-      container.innerHTML += `
-        <div>
-          <h2>${product.name}</h2>
-          <img src="${product.image}" width="150" />
-          <p>${product.price} $</p>
-          <p>${product.description}</p>
-        </div>
-      `;
-    });
-  })
-  .catch((err) => {
-    console.error('Error loading products:', err);
-  });
+    container.innerHTML = products
+      .map(
+        (p) => `
+      <div class="product">
+        <h2>${p.name}</h2>
+
+        <img 
+          src="${p.image}" 
+          width="150" 
+          alt="${p.name}"
+        />
+
+        <p><strong>${p.price} $</strong></p>
+        <p>${p.description}</p>
+      </div>
+    `,
+      )
+      .join('');
+  } catch (err) {
+    console.error('Error loading products.json:', err);
+  }
+}
+
+// Run on page load
+loadProducts();
