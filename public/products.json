@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "name": "Laptop Pro",
+      "price": 1200,
+      "image": "/images/laptop.png",
+      "description": "High performance laptop built for demanding workflows and all-day productivity."
+    },
+    {
+      "name": "Wireless Headphones",
+      "price": 240,
+      "image": "/images/headphones.png",
+      "description": "Premium over-ear headphones with active noise cancellation and rich, balanced sound."
+    },
+    {
+      "name": "Smartphone X",
+      "price": 899,
+      "image": "/images/smartphone.png",
+      "description": "Edge-to-edge display, powerful camera system, and a battery that lasts all day."
+    },
+    {
+      "name": "Smartwatch Series 5",
+      "price": 320,
+      "image": "/images/smartwatch.png",
+      "description": "Track fitness, notifications, and health metrics from your wrist with style."
+    },
+    {
+      "name": "Mechanical Keyboard",
+      "price": 130,
+      "image": "/images/keyboard.png",
+      "description": "Compact mechanical keyboard with tactile switches for a precise typing experience."
+    },
+    {
+      "name": "4K Monitor",
+      "price": 560,
+      "image": "/images/monitor.png",
+      "description": "Crisp 4K resolution on a slim, color-accurate panel perfect for work and play."
+    }
+  ]
+}
